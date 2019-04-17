@@ -9,11 +9,14 @@ class Base extends Component {
     return (
       <div className="base__wrapper">
         <div className="base__sidebar" />
-        <div className="base__main">
-          <div className="base__main__top" />
-          <div className="base__main__content">
-            <Navbar />
-            {this.props.children}
+        <div className="base__body">
+          <div className="base__body__header" />
+          <div className="base__body__content">
+            <div className="base__body__content__main">
+              <Navbar />
+              {this.props.children}
+            </div>
+            <div className="base__body__content__sidebar" />
           </div>
         </div>
       </div>

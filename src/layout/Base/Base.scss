@@ -1,0 +1,41 @@
+.base__wrapper {
+  height: 100vh;
+  overflow: hidden;
+  overflow: auto;
+  display: flex;
+}
+
+.base__sidebar {
+  width: 200px;
+  background: white;
+  border-right: 1px solid #ebebeb;
+}
+
+.base__body {
+  flex: 1;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.base__body__header {
+  height: 80px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.base__body__content {
+  flex: 1;
+  display: flex;
+}
+
+.base__body__content__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 20px 0 20px;
+}
+
+.base__body__content__sidebar {
+  width: 450px;
+  background: white;
+}

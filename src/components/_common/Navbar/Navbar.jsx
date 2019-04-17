@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Navbar.scss";
 
@@ -8,15 +8,27 @@ class Navbar extends Component {
     return (
       <nav className="navbar__wrapper">
         <ul className="navbar__menu">
-          <Link className="navbar__menu__item" to="/daily">
+          <NavLink
+            className="navbar__menu__item"
+            to="/daily"
+            activeClassName="navbar__menu__item__active"
+          >
             Daily
-          </Link>
-          <Link to="/monthly/" className="navbar__menu__item">
+          </NavLink>
+          <NavLink
+            to="/monthly/"
+            className="navbar__menu__item"
+            activeClassName="navbar__menu__item__active"
+          >
             Monthly
-          </Link>
-          <Link to="/yearly/" className="navbar__menu__item">
+          </NavLink>
+          <NavLink
+            to="/yearly/"
+            className="navbar__menu__item"
+            activeClassName="navbar__menu__item__active"
+          >
             Yearly
-          </Link>
+          </NavLink>
         </ul>
       </nav>
     );

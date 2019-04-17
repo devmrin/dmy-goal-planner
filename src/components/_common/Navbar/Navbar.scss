@@ -1,13 +1,12 @@
 .navbar__wrapper {
-  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .navbar__menu {
   display: flex;
-  justify-content: center;
-  margin: 0;
   list-style-type: none;
-  padding: 0 50px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar__menu__item {
@@ -16,7 +15,17 @@
   display: flex;
   align-items: center;
   border-radius: 5px;
-  padding: 15px 40px;
+  padding: 12px 40px;
   background: #eee;
   margin-right: 30px;
+}
+
+.navbar__menu__item__active {
+  background: #8e80ef;
+  color: white;
+  box-shadow: 0 10px 6px -9px #8e80ef;
+}
+
+.navbar__menu__item:nth-last-of-type(1) {
+  margin-right: 0;
 }

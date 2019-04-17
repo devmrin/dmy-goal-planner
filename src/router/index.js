@@ -6,7 +6,6 @@ function AppRouter() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Daily} />
         <Route path="/daily/" exact component={Daily} />
         <Route path="/monthly/" exact component={Monthly} />
         <Route path="/yearly/" exact component={Yearly} />
