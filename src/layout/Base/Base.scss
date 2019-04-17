@@ -18,11 +18,6 @@
   flex-direction: column;
 }
 
-.base__body__header {
-  height: 80px;
-  border-bottom: 1px solid #ebebeb;
-}
-
 .base__body__content {
   flex: 1;
   display: flex;
@@ -36,7 +31,7 @@
 }
 
 .base__body__content__sidebar {
-  width: 450px;
+  width: 330px;
   background: white;
   border-left: 1px solid #ebebeb;
 }

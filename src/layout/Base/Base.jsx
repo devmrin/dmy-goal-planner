@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Navbar } from "components/_common";
+import { Tabs, Navbar } from "components/_common";
 
 import "./Base.scss";
 
@@ -10,13 +10,13 @@ class Base extends Component {
       <div className="base__wrapper">
         <div className="base__sidebar" />
         <div className="base__body">
-          <div className="base__body__header" />
+          <Navbar />
           <div className="base__body__content">
             <div className="base__body__content__main">
-              <Navbar />
+              <Tabs />
               {this.props.children}
             </div>
-            <div className="base__body__content__sidebar" />
+            {/* <div className="base__body__content__sidebar" /> */}
           </div>
         </div>
       </div>

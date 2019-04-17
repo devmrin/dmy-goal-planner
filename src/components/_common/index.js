@@ -1,3 +1,4 @@
-import Navbar from './Navbar'
+import Tabs from "./Tabs";
+import Navbar from "./Navbar";
 
-export {Navbar}
+export { Tabs, Navbar };

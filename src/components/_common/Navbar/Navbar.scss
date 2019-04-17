@@ -1,31 +1,14 @@
 .navbar__wrapper {
-  margin-bottom: 30px;
+  height: 80px;
+  border-bottom: 1px solid #ebebeb;
+  display: grid;
+  grid-template-columns: 1fr 80px 250px;
 }
 
-.navbar__menu {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar__search {
+  border-right: 1px solid #ebebeb;
 }
 
-.navbar__menu__item {
-  color: #a0a0a0;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 12px 40px;
-  background: #eee;
-  margin-right: 30px;
-}
-
-.navbar__menu__item__active {
-  background: #8e80ef;
-  color: white;
-  box-shadow: 0 9px 15px -9px #8e80ef;
-}
-
-.navbar__menu__item:nth-last-of-type(1) {
-  margin-right: 0;
+.navbar__notification {
+  border-right: 1px solid #ebebeb;
 }
