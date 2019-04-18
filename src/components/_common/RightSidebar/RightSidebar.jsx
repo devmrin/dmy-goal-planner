@@ -6,7 +6,7 @@ export class RightSidebar extends Component {
   render() {
     return (
       <div className="r-sidebar__wrapper">
-        <div className="r-sidebar__calendar">Apr</div>
+        <div className="r-sidebar__calendar" />
       </div>
     );
   }
