@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Tabs, Navbar } from "components/_common";
+import { Tabs, Navbar, RightSidebar } from "components/_common";
 
 import "./Base.scss";
 
@@ -16,7 +16,7 @@ class Base extends Component {
               <Tabs />
               {this.props.children}
             </div>
-            <div className="base__body__content__sidebar" />
+            <RightSidebar />
           </div>
         </div>
       </div>
