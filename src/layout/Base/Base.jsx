@@ -16,7 +16,7 @@ class Base extends Component {
               <Tabs />
               {this.props.children}
             </div>
-            {/* <div className="base__body__content__sidebar" /> */}
+            <div className="base__body__content__sidebar" />
           </div>
         </div>
       </div>

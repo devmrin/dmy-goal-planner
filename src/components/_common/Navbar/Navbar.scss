@@ -10,5 +10,24 @@
 }
 
 .navbar__notification {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-right: 1px solid #ebebeb;
+}
+
+.navbar__notification__img {
+  height: 23px;
+}
+
+.navbar__notification__active {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #fafafa;
+  background: #8e80ef;
+  border-radius: 50%;
+  top: 29px;
+  left: 40px;
 }
