@@ -1,0 +1,73 @@
+.monthly__goals__wrapper {
+  margin-top: 0;
+}
+
+.monthly__goals__cf__wrapper {
+  background: #8e80ef;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.monthly__goals__cf__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.monthly__goals__forwaded__img {
+  margin-right: 5px;
+  height: 15px;
+}
+
+.monthly__cf__goal__container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.monthly__cf__goal__container:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.monthly__cf__goal__radio {
+  min-height: 15px;
+  min-width: 15px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+.monthly__cf__goal__text {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.monthly__goals__regular__wrapper {
+  padding: 10px;
+}
+
+.monthly__goal__container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.monthly__goal__radio {
+  min-height: 15px;
+  min-width: 15px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+.monthly__goal__text {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #4b4b4b;
+}
