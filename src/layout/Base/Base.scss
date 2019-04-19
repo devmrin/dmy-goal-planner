@@ -1,7 +1,5 @@
 .base__wrapper {
   height: 100vh;
-  overflow: hidden;
-  overflow: auto;
   display: flex;
 }
 
@@ -21,11 +19,21 @@
 .base__body__content {
   flex: 1;
   display: flex;
+  height: calc(100vh - 85px);
+  overflow: hidden;
 }
 
 .base__body__content__main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 30px 30px 0 30px;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.base__body__content__child {
+  padding: 15px 30px;
+  height: calc(100vh - 160px);
+  overflow: hidden;
+  overflow-y: auto;
 }

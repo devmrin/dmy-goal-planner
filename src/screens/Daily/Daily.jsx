@@ -9,8 +9,45 @@ class Daily extends Component {
       <Base>
         <div className="daily__heading">today</div>
         <div className="daily__date">{`${moment(new Date()).format(
-          "D MMMM YYYY"
+          "Do MMMM YYYY"
         )}`}</div>
+        <div className="daily__goals__wrapper">
+          {[
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ].map((goalObj, i) => (
+            <div className="daily__goal__container" key={goalObj}>
+              <div className="daily__goal__radio">
+                <div className="daily__goal__active" />
+              </div>
+              <div className="daily__goal__text">
+                {`Complete Trigonometry Lesson ${i + 1}`}
+              </div>
+            </div>
+          ))}
+        </div>
       </Base>
     );
   }
