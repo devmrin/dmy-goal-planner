@@ -16,14 +16,14 @@ class Tabs extends Component {
             Daily
           </NavLink>
           <NavLink
-            to="/monthly/"
+            to="/monthly"
             className="tabbar__menu__item"
             activeClassName="tabbar__menu__item__active"
           >
             Monthly
           </NavLink>
           <NavLink
-            to="/yearly/"
+            to="/yearly"
             className="tabbar__menu__item"
             activeClassName="tabbar__menu__item__active"
           >

@@ -1,18 +1,15 @@
 // action types
-export const UPDATE_ANNOUNCEMENT_TOGGLE = "UPDATE_ANNOUNCEMENT_TOGGLE";
+export const UPDATE_CURRENT_WINDOW = "UPDATE_CURRENT_WINDOW";
 
 // action creator
-export const updateAnnouncementToggle = payload => ({
-  type: UPDATE_ANNOUNCEMENT_TOGGLE,
+export const updateCurrentWindow = payload => ({
+  type: UPDATE_CURRENT_WINDOW,
   payload
 });
 
 // initial state
 export const initialState = {
-  showAnnouncement: true,
-  announcementHeight: 0,
-  navbarHeight: 0,
-  searchbarHeight: 0
+  currentWindow: "daily"
 };
 
 // reducer
@@ -20,7 +17,7 @@ const baseReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case UPDATE_ANNOUNCEMENT_TOGGLE:
+    case UPDATE_CURRENT_WINDOW:
       return { ...state, ...payload };
 
     default:
