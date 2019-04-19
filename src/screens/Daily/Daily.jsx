@@ -5,8 +5,8 @@ import { ForwardArrow } from "assets";
 import "./Daily.scss";
 class Daily extends Component {
   state = {
-    dailyGoalsArray: [1, 2, 3, 4, 5],
-    cfDailyGoalsArray: [1, 2, 3]
+    dailyGoalsArray: [11, 12, 13, 14, 15],
+    cfDailyGoalsArray: [3, 5, 9]
   };
 
   render() {
@@ -23,13 +23,13 @@ class Daily extends Component {
               />
               Carry Forwarded
             </div>
-            {cfDailyGoalsArray.map((goalObj, i) => (
+            {cfDailyGoalsArray.map(goalObj => (
               <div className="daily__cf__goal__container" key={goalObj}>
                 <div className="daily__cf__goal__radio">
                   <div className="daily__cf__goal__active" />
                 </div>
                 <div className={"daily__cf__goal__text"}>
-                  {`Complete Trigonometry Lesson ${i + 1}`}
+                  {`Complete Trigonometry Lesson ${goalObj}`}
                 </div>
               </div>
             ))}
@@ -41,7 +41,7 @@ class Daily extends Component {
                   <div className="daily__goal__active" />
                 </div>
                 <div className="daily__goal__text">
-                  {`Complete Trigonometry Lesson ${i + 1}`}
+                  {`Complete Trigonometry Lesson ${goalObj}`}
                 </div>
               </div>
             ))}
