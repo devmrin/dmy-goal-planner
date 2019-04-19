@@ -1,15 +1,15 @@
 // action types
-export const UPDATE_CURRENT_WINDOW = "UPDATE_CURRENT_WINDOW";
+export const UPDATE_GOALS_ARRAY = "UPDATE_GOALS_ARRAY";
 
 // action creator
-export const updateCurrentWindow = payload => ({
-  type: UPDATE_CURRENT_WINDOW,
+export const updateGoalsArray = payload => ({
+  type: UPDATE_GOALS_ARRAY,
   payload
 });
 
 // initial state
 export const initialState = {
-  currentWindow: "daily"
+  goalsArray: []
 };
 
 // reducer
@@ -17,7 +17,7 @@ const baseReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case UPDATE_CURRENT_WINDOW:
+    case UPDATE_GOALS_ARRAY:
       return { ...state, ...payload };
 
     default:

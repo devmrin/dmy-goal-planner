@@ -1,17 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Daily, Monthly, Yearly } from "screens";
+import { updateGoalsArray } from "ducks";
+import { connect } from "react-redux";
 
-function AppRouter() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/daily/" exact component={Daily} />
-        <Route path="/monthly/" exact component={Monthly} />
-        <Route path="/yearly/" exact component={Yearly} />
-      </Switch>
-    </Router>
-  );
+class AppRouter extends React.Component {
+  componentDidMount() {
+    if (window.localStorage.getItem("goalsArray")) {
+      this.props.updateGoalsArray({
+        goalsArray: JSON.parse(window.localStorage.getItem("goalsArray"))
+      });
+    } else {
+      this.props.updateGoalsArray({
+        goalsArray: []
+      });
+    }
+  }
+
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route path="/daily/" exact component={Daily} />
+          <Route path="/monthly/" exact component={Monthly} />
+          <Route path="/yearly/" exact component={Yearly} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 
-export default AppRouter;
+const mapDispatchToProps = dispatch => ({
+  updateGoalsArray: payload => dispatch(updateGoalsArray(payload))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AppRouter);
