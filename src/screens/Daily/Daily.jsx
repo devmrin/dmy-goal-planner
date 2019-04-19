@@ -12,32 +12,7 @@ class Daily extends Component {
           "Do MMMM YYYY"
         )}`}</div>
         <div className="daily__goals__wrapper">
-          {[
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24
-          ].map((goalObj, i) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((goalObj, i) => (
             <div className="daily__goal__container" key={goalObj}>
               <div className="daily__goal__radio">
                 <div className="daily__goal__active" />
