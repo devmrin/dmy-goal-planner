@@ -1,19 +1,31 @@
-.daily__heading {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: #a4a4a4;
-  font-weight: 600;
-}
-
-.daily__date {
-  margin-top: 5px;
-  color: #454545;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
 .daily__goals__wrapper {
-  margin-top: 20px;
+  margin-top: 0;
+}
+
+.daily__goals__cf__wrapper {
+  background: #8e80ef;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.daily__goals__cf__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.daily__goals__forwaded__img {
+  margin-right: 5px;
+  height: 20px;
+}
+
+.daily__goals__regular__wrapper {
+  padding: 10px;
 }
 
 .daily__goal__container {
@@ -35,4 +47,28 @@
   margin-left: 10px;
   font-size: 1.2rem;
   color: #4b4b4b;
+}
+
+.daily__cf__goal__container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.daily__cf__goal__container:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.daily__cf__goal__radio {
+  min-height: 15px;
+  min-width: 15px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+.daily__cf__goal__text {
+  margin-left: 10px;
+  font-size: 1.2rem;
 }
