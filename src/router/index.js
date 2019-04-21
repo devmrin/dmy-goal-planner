@@ -30,11 +30,15 @@ class AppRouter extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  goalsArray: state.base.goalsArray
+});
+
 const mapDispatchToProps = dispatch => ({
   updateGoalsArray: payload => dispatch(updateGoalsArray(payload))
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(AppRouter);

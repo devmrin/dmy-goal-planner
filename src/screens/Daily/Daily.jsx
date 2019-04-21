@@ -8,10 +8,15 @@ import { ForwardArrow } from "assets";
 
 import "./Daily.scss";
 class Daily extends Component {
-  handleAddGoal = () => {
-    this.props.updateGoalsArray({
-      goalsArray: [nanoid()]
+  handleAddGoal = async () => {
+    let existingGoals = this.props.goalsArray;
+    await this.props.updateGoalsArray({
+      goalsArray: [...existingGoals, nanoid()]
     });
+    window.localStorage.setItem(
+      "goalsArray",
+      JSON.stringify(this.props.goalsArray)
+    );
   };
   render() {
     let dailyGoalsArray = this.props.goalsArray; //Add filtering logic
