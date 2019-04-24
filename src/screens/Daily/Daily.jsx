@@ -4,7 +4,7 @@ import nanoid from "nanoid";
 import { updateGoalsArray } from "ducks";
 
 import { Base } from "layout";
-import { ForwardArrow } from "assets";
+import { ForwardArrow, Empty } from "assets";
 
 import "./Daily.scss";
 class Daily extends Component {
@@ -24,42 +24,53 @@ class Daily extends Component {
     return (
       <Base>
         <div className="daily__goals__wrapper">
-          {cfDailyGoalsArray && cfDailyGoalsArray.length > 0 && (
-            <div className="daily__goals__cf__wrapper">
-              <div className="daily__goals__cf__header">
-                <img
-                  src={ForwardArrow}
-                  alt="forward"
-                  className="daily__goals__forwaded__img"
-                />
-                Carry Forwarded
+          {cfDailyGoalsArray.length === 0 ? (
+            <div className="daily__goals__empty__container">
+              <img src={Empty} alt="empty" className="daily__goals__empty" />
+              <div className="daily__goals__empty__text">
+                I see no goals! Click add button to add one.
               </div>
-              {cfDailyGoalsArray.map(goalObj => (
-                <div className="daily__cf__goal__container" key={goalObj}>
-                  <div className="daily__cf__goal__radio">
-                    <div className="daily__cf__goal__active" />
+            </div>
+          ) : (
+            <div className="daily__goals__container">
+              {cfDailyGoalsArray && cfDailyGoalsArray.length > 0 && (
+                <div className="daily__goals__cf__wrapper">
+                  <div className="daily__goals__cf__header">
+                    <img
+                      src={ForwardArrow}
+                      alt="forward"
+                      className="daily__goals__forwaded__img"
+                    />
+                    Carry Forwarded
                   </div>
-                  <div className={"daily__cf__goal__text"}>
-                    {`Complete Trigonometry Lesson ${goalObj}`}
-                  </div>
+                  {cfDailyGoalsArray.map(goalObj => (
+                    <div className="daily__cf__goal__container" key={goalObj}>
+                      <div className="daily__cf__goal__radio">
+                        <div className="daily__cf__goal__active" />
+                      </div>
+                      <div className={"daily__cf__goal__text"}>
+                        {`Complete Trigonometry Lesson ${goalObj}`}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
+              <div className="daily__goals__regular__wrapper">
+                {dailyGoalsArray &&
+                  dailyGoalsArray.map((goalObj, i) => (
+                    <div className="daily__goal__container" key={goalObj}>
+                      <div className="daily__goal__radio">
+                        <div className="daily__goal__active" />
+                      </div>
+                      <div className="daily__goal__text">
+                        {`Complete Trigonometry Lesson ${goalObj}`}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              <button onClick={this.handleAddGoal}>Add goal</button>
             </div>
           )}
-          <div className="daily__goals__regular__wrapper">
-            {dailyGoalsArray &&
-              dailyGoalsArray.map((goalObj, i) => (
-                <div className="daily__goal__container" key={goalObj}>
-                  <div className="daily__goal__radio">
-                    <div className="daily__goal__active" />
-                  </div>
-                  <div className="daily__goal__text">
-                    {`Complete Trigonometry Lesson ${goalObj}`}
-                  </div>
-                </div>
-              ))}
-          </div>
-          <button onClick={this.handleAddGoal}>Add goal</button>
         </div>
       </Base>
     );
