@@ -3,7 +3,7 @@
 }
 
 .daily__goals__empty__container {
-  margin-top: 100px;
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -14,6 +14,7 @@
 .daily__goals__empty__text {
   margin: 20px 0;
   font-size: 1.4rem;
+  font-style: oblique;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -63,13 +64,16 @@
 }
 
 .daily__goals__regular__wrapper {
+  margin-top: 10px;
   padding: 10px;
 }
 
 .daily__goal__container {
+  user-select: none;
+  cursor: pointer;
   margin-bottom: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .daily__goal__radio {
@@ -77,12 +81,41 @@
   min-width: 15px;
   border: 1px solid #aaa;
   border-radius: 50%;
-  position: relative;
-  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily__goal__active {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background: #6f6f6f;
 }
 
 .daily__goal__text {
   margin-left: 10px;
   font-size: 1.2rem;
   color: #4b4b4b;
+}
+
+.daily__goal__text__checked {
+  text-decoration: line-through;
+}
+
+.daily__add__button {
+  user-select: none;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8e80ef;
+  padding: 0px;
+}
+
+.daily__add__button__plus {
+  height: 20px;
 }
