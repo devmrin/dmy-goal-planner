@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import { Daily, Monthly, Yearly } from "screens";
 import { updateGoalsArray } from "ducks";
 import { connect } from "react-redux";
@@ -21,6 +26,7 @@ class AppRouter extends React.Component {
     return (
       <Router>
         <Switch>
+          <Route path="/" exact render={() => <Redirect to="/daily/" />} />
           <Route path="/daily/" exact component={Daily} />
           <Route path="/monthly/" exact component={Monthly} />
           <Route path="/yearly/" exact component={Yearly} />
